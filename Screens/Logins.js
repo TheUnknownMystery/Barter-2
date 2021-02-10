@@ -148,9 +148,8 @@ export default class login extends React.Component {
 
       firebase.auth().createUserWithEmailAndPassword(Email, Password)
 
-        //working till here
         .then((response) => {
-
+    //working till here but not working inside the db.collections
           db.collection("Users").add({
 
             'FirstName': this.state.FirstName,
